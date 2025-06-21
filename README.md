@@ -13,4 +13,3 @@
 - Each folder has code and a `README.md` with weekly notes.  
 - Projects are graded: ✅ (done), 🚧 (in progress), ❌ (pending).  
 
-*(Need inspiration? Check [Awesome Data Engineering](https://github.com/igorbarinov/awesome-data-engineering)!)*  
