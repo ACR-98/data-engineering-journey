@@ -10,7 +10,7 @@ def main():
         except (FileNotFoundError, json.JSONDecodeError):
             return {}
 
-    contacts = load_contacts() #Converts the json into a list
+    contacts = load_contacts() #Converts the json into a dict
     def save_contacts(): #Saves a file
         with open("contacts.json", "w") as contacts_file:
             json.dump(contacts, contacts_file, indent=4)
@@ -19,7 +19,7 @@ def main():
 
     def new_contacts():
         name = input("Enter the name: ").strip()
-        number = str(input("Enter the phone number: ").strip())
+        number = input("Enter the phone number: ").strip()
         contacts.update({name:number})
         save_contacts()
         print(f"{number} has been added as {name}")
@@ -31,8 +31,8 @@ def main():
 
     def modify_contacts():
         name = input("Which contact do you want to modify?: ").strip()
-        number = input("Enter the new phone number: ").strip()
         if name in contacts:
+            number = input("Enter the new phone number: ").strip()
             contacts[name] = number
             save_contacts()
             print(f"{name}'s phone number has been updated as {number}")  # Corregido ` por '
@@ -42,12 +42,12 @@ def main():
     def search_contacts():
         name = input("Which contact do you want to search?: ").strip()
         if name in contacts:
-            print(f"{name}'s phone number is {contacts[name]}")  # Corregido ` por '
-        else:
-            print(f"Contact {name} not found.")  # Añadido else faltante
+            print(f"{name}'s phone number is {contacts[name]}")
+            else:
+            print(f"Contact {name} not found.")
 
     def exit_contacts():
-        choice = str(input("Do you want to exit? (y/n): ").lower())
+        choice = str(input("Do you want to exit? (y/n): ").lower()).strip()
         if choice == "y":
             print("Goodbye")
             return True
