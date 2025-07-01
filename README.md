@@ -6,7 +6,7 @@
 ### 📌 Weekly Plan  
 | Week | Topics          | Projects                          | Status |  
 |------|-----------------|-----------------------------------|--------|  
-| 1    | Python basics   | Number guesser, To-Do List       | 🚧     |  
+| 1    | Python basics   | Number guesser, To-Do List       | ✅     |  
 | 2    | SQL basics      | Movies database, Queries         | ❌     |  
 
 ## 🛠️ How to Use This Repo  
